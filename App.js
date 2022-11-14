@@ -1,17 +1,28 @@
-import { StyleSheet } from 'react-native';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Home} from './components/Home.js'
 import {Destination} from './components/Destinations.js'
-import {Restaurant} from './components/Restaurants.js'
+import {Restaurants} from './components/Restaurants.js'
+// import {Login} from './components/Login.js'
+import React, { useState, } from 'react';
+import { StyleSheet } from 'react-native';
+
+
 
 
 
 
 const Tab = createBottomTabNavigator();
 export default function App() {
+  // const[isLogin,setisLogin]=useState();
+  // const setLogin=()=>{
+  //   setisLogin(true)
+  // }
   return (
+    // <View>
+    //* <Login function={setLogin}/> */}
+    // if({isLogin})
+    //{ *
     <NavigationContainer>
       <Tab.Navigator initialRoute="Home">
         <Tab.Screen
@@ -24,10 +35,11 @@ export default function App() {
         />
         <Tab.Screen
           name="My Restaurants"
-          component={Restaurant}
+          component={Restaurants}
         />
       </Tab.Navigator>
     </NavigationContainer>
+    // </View>
 
   )
 }
